@@ -1,0 +1,51 @@
+.notesContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #e9eef6; /* Light blue background like Figma */
+}
+
+/* Header */
+.header {
+  padding: 15px 20px;
+  background: #1e40af;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Notes Scroll Area */
+.notesList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Individual Note Card */
+.noteItem {
+  background: white;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 15px;
+}
+
+/* Bottom Input Area */
+.inputArea {
+  border-top: 1px solid #ddd;
+  padding: 15px 20px;
+  background: white;
+}
+
+/* Textarea */
+.textarea {
+  width: 100%;
+  height: 80px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+}

@@ -1,0 +1,56 @@
+.sidebar {
+  width: 30%;
+  background: #f7f7f7;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.groupRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.initialCircle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.floatingBtn {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 28px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+.groupRow:hover {
+  background: #e6e6e6;
+  border-radius: 6px;
+  padding: 5px;
+}
+.floatingBtn:hover {
+  transform: scale(1.08);
+}
