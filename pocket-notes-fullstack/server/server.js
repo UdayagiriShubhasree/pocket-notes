@@ -1,4 +1,3 @@
-
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -11,18 +10,24 @@ import noteRoutes from "./routes/noteRoutes.js";
 dotenv.config();
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
+// Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/groups", groupRoutes);
 app.use("/api/notes", noteRoutes);
 
+// MongoDB Connection + Server Start
 mongoose.connect(process.env.MONGO_URI)
-.then(() => {
-  console.log("Mongo connected");
-  app.listen(process.env.PORT, () =>
-    console.log("Server running")
-  );
-})
-.catch(console.error);
+  .then(() => {
+    console.log("Mongo connected");
+
+    const PORT = process.env.PORT || 5000;
+
+    app.listen(PORT, () => {
+      console.log("Server running on port", PORT);
+    });
+  })
+  .catch(err => console.log("Mongo error:", err));
